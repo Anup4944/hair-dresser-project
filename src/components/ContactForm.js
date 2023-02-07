@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const Form = styled.form`
   background: #fff;
   height: 70%;
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -50,8 +50,8 @@ const TextArea = styled.textarea`
   margin-top: 10px;
   margin-left: 50px;
   min-width: 300px;
-  width: 350px;
-  max-width: 700px;
+  width: 50px;
+  max-width: 500px;
   max-height: 100px;
   min-height: 200px;
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
@@ -107,14 +107,15 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_o1nux8u",
-        "template_tjr5m0k",
+        "service_41gjaje",
+        "template_fdwyzr6",
         formRef.current,
-        "user_okjNVIUiZZzdPlrzjSyZz"
+        "OnOfijp2NmT44CVKR"
       )
       .then(
         (result) => {
           alert("Your mail is sent!");
+          console.log(result.text);
         },
         (error) => {
           alert("Oops... " + JSON.stringify(error));
